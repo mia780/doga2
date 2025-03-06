@@ -12,51 +12,45 @@ namespace _2_feladat
         {
             Console.WriteLine("Add meg a tömb méretét");
             int n = int.Parse(Console.ReadLine());
-            tomb (n) = random.Next(50, 150);
+            int[] tomb = new int[n];
             Random random = new Random();
-           
-            double kicsi= 0;
-            double nagy = 0;
-            double csokkeno;
-            int[] tomb = int.Parse(Console.ReadLine();
-
-            
-
-            for (int i = 0; i < tomb.Length i++)
-            {
-                
-                Console.WriteLine($"A tömb elemei:{tomb[i]}"); 
-
+            for (int i = 0; i < n; i++) {
+                tomb[i] = random.Next(50, 150);
             }
+           
+            double kicsi= 99999;
+            double nagy = 0;
+            
+            Console.WriteLine("A tomb elemei:");
             foreach (int l in tomb)
             {
            
-                tomb[l] = random.Next(50, 150);
-                Console.WriteLine($"A tomb elemei:{l}");
-
+                Console.Write($"{l} ");
             }
+            Console.WriteLine();
+            
             for (int j = 0; j < tomb.Length; j++) 
             {
-                tomb[i] = random.Next(50, 150);
-                if (tomb[j] < kicsi) 
-                kicsi = tomb[j];
-                
-                Console.WriteLine($"A legkisebb szám {kicsi}");
+                if (tomb[j] < kicsi) {
+                    kicsi = tomb[j];
+                }
             }
+            Console.WriteLine($"A legkisebb szám {kicsi}");
+            
             for (int m = 0; m < tomb.Length; m++)
             {
-                tomb[m] = random.Next(50, 150);
-                if (tomb[m] > nagy) 
-                nagy = tomb[m];
-                
-                Console.WriteLine($"A legnagyobb szám {nagy}");
+                if (tomb[m] > nagy) {
+                    nagy = tomb[m];
+                }
             }
-            for (int r = 0; r < tomb.Length; r++)
-            {
-                if (tomb[r] > csokkeno) 
-                    csokkeno.
+            Console.WriteLine($"A legnagyobb szám {nagy}");
 
-                Console.WriteLine($"A tomb csokkenő sorrendbe: {csokkeno}");
+            Array.Sort(tomb);
+            Console.WriteLine($"A tomb csokkenő sorrendbe:");
+            for (int r = tomb.Length - 1; r >= 0; r--)
+            {
+                Console.Write($"{tomb[r]} ");
+
             }
             
             
